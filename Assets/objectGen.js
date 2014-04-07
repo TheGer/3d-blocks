@@ -1,14 +1,15 @@
 ﻿#pragma strict
 var cubeObject:Rigidbody;
-var squareObject:Rigidbody;
+var sphereObject:Rigidbody;
 
 
-function generateObject()
+function generateCubes()
 {
 	//infinite loop (on purpose)
 	while(true)
 	{
-		//add the code to instantiate spheres
+		//add the code to instantiate cubes.  This is creating one cube per second
+		//exercise 1: Add generation of spheres
 		Instantiate(cubeObject,Vector3(Random.Range(-6,6),Random.Range(-5,5),transform.position.z),transform.rotation);
 		yield WaitForSeconds(1.0);
 	}
@@ -17,7 +18,7 @@ function generateObject()
 
 function Start () {
 	//generate one object per second
-	yield StartCoroutine("generateObject");
+	yield StartCoroutine("generateCubes");
 }
 
 function Update () {

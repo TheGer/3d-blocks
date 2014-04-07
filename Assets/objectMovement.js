@@ -15,5 +15,6 @@ function Update () {
 
 function OnBecameInvisible()
 {
+	//Exercise 3: Implement missed cubes counter
 	Destroy(this.gameObject);
 }
