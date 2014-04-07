@@ -1,9 +1,9 @@
 ﻿#pragma strict
 
 function Start () {
-
+	Screen.showCursor = false;
 }
-
+	var line:LineRenderer;
 function Update () {
 	
 	//get the SCREEN position of the mouse
@@ -31,8 +31,16 @@ function Update () {
 		//each hit returns a raycast hit
 		var hit:RaycastHit;
 		
+		
+		
 		//method that generates the laser
 		if (Physics.Raycast (ray, hit)) {
+			//draw a line
+		
+			//show a line
+			line.SetPosition(0, ray.origin);
+			line.SetPosition(1, hit.point);
+			
 			//hit the cube.
 			//for example to only destroy objects tagged 'cube'
 			if (hit.collider.gameObject.tag == "thecube")
