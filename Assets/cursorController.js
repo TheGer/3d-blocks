@@ -38,7 +38,7 @@ function Update () {
 			//draw a line
 		
 			//show a line
-			line.SetPosition(0, ray.origin);
+			line.SetPosition(0, Vector3(0,-7,0));
 			line.SetPosition(1, hit.point);
 			
 			//hit the cube.
